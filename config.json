@@ -18,7 +18,9 @@
         "Referer": "https://buff.163.com/market/csgo",
         "X-Requested-With": "XMLHttpRequest"
       }
-    }
+    },
+    "session": "1-ydaC2xQuK_DtQ5tiJccJxwHHQELgekYZtWshclOy9FTn2028730189",
+    "remember_me": "U1076193301|uziVUnZI2qVbX234PB914sN7qPG1Q1QJ"
   },
   "steam": {
     "request_interval": 15,

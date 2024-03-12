@@ -1,7 +1,7 @@
 import asyncio
 from datetime import datetime
 
-from buff2steam.provider.steamSelenium import SteamSelenium
+from buff2steam.provider.buffSelenium import BuffSelenium
 from buff2steam.provider.postgres import Postgres
 from buff2steam import logger, config
 
@@ -42,7 +42,7 @@ async def toast_async(title, text, icon, app_id):
     future = loop.run_in_executor(None, lambda: toast(title, text, icon=icon, app_id=app_id))
     await future
 
-async def main_loop(steamSelenium, postgres):    
+async def main_loop(buffSelenium, postgres):    
     global last_entry_checked
     logger.info('Start')
     while True:
@@ -59,14 +59,12 @@ async def main_loop(steamSelenium, postgres):
             last_entry_checked = last_entry
             
             logger.info('New entry {}'.format(last_entry_checked))
-        
-            if last_entry_checked['currency'] == 'SOLD':
-                continue
             
-            url = last_entry_checked['link']
-            listing_id = last_entry_checked['id']
+            url = last_entry_checked['buffurl']
             
-            bought = await steamSelenium.open_url(url, listing_id)
+            min_price = last_entry_checked['buff_min_price']
+            
+            bought = await buffSelenium.open_url(url, min_price)
             
             if bought:
                 await notify('Buff2Steam', 'Item Bought!', True)
@@ -78,13 +76,13 @@ async def main_loop(steamSelenium, postgres):
 async def main():
     try:
         while True:
-            async with SteamSelenium(
-                sessionid=config['steam']['sessionid'],
-                steamLoginSecure=config['steam']['steamLoginSecure'],
-            ) as steamSelenium, Postgres(
+            async with BuffSelenium(
+                session=config['buff']['session'],
+                remember_me=config['buff']['remember_me'],
+            ) as buffSelenium, Postgres(
                 uri=config['postgres']['uri'],
             ) as postgres:
-                await main_loop(steamSelenium, postgres)
+                await main_loop(buffSelenium, postgres)
             
     except KeyboardInterrupt:
         exit('Bye~')

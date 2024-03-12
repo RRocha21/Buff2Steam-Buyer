@@ -1,7 +1,7 @@
-httpx
 tenacity
 loguru
-gspread
 oauth2client
 asyncpg
 psycopg2
+selenium
+win11toast
