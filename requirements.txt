@@ -1,0 +1,7 @@
+httpx
+tenacity
+loguru
+gspread
+oauth2client
+asyncpg
+psycopg2
