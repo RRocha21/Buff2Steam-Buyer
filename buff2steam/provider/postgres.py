@@ -31,7 +31,7 @@ class Postgres:
             async with self.pool.acquire() as connection:
                 async with connection.transaction():
                     last_entry = await connection.fetchrow(
-                        f"SELECT * FROM buff2steam ORDER BY updatedat DESC LIMIT 1"
+                        f"SELECT * FROM buff2steams ORDER BY updatedat DESC LIMIT 1"
                     )
                     return last_entry
         except Exception as e:
