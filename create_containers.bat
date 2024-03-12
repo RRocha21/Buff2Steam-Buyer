@@ -1,14 +1,14 @@
 @echo off
 
 REM Set the base image name
-set imageName=steam2buff
+set imageName=buff2steam
 
 REM Build the Docker image
 docker build -t %imageName% .
 
 REM Loop to create 100 containers
 for /L %%i in (1,1,100) do (
-    set containerName=steam2buff-%%i
+    set containerName=buff2steam-%%i
     docker run --name=%containerName% --restart=always -d %imageName%
     
     REM Add a delay of 10 seconds

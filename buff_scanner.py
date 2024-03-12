@@ -6,7 +6,7 @@ import json
 
 import trio
 
-from steam2buff.provider.buff import Buff
+from buff2steam.provider.buff import Buff
 
 header = [
     'market_hash_name', 'buff_says_ratio', 'buff_sell_num', 'buff_min_price', 'buff_says_steam_price',

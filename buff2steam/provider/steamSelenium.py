@@ -1,4 +1,4 @@
-from steam2buff import logger
+from buff2steam import logger
 
 from datetime import datetime
 

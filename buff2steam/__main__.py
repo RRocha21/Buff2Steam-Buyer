@@ -1,9 +1,9 @@
 import asyncio
 from datetime import datetime
 
-from steam2buff.provider.steamSelenium import SteamSelenium
-from steam2buff.provider.postgres import Postgres
-from steam2buff import logger, config
+from buff2steam.provider.steamSelenium import SteamSelenium
+from buff2steam.provider.postgres import Postgres
+from buff2steam import logger, config
 
 import os
 
@@ -69,9 +69,9 @@ async def main_loop(steamSelenium, postgres):
             bought = await steamSelenium.open_url(url, listing_id)
             
             if bought:
-                await notify('Steam2Buff', 'Item Bought!', True)
+                await notify('Buff2Steam', 'Item Bought!', True)
             else:
-                await notify('Steam2Buff', 'Item Not Bought!', False)
+                await notify('Buff2Steam', 'Item Not Bought!', False)
             
         time.sleep(0.2)
 
