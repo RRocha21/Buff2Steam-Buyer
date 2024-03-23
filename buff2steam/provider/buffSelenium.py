@@ -33,7 +33,7 @@ class BuffSelenium:
     async def __aenter__(self):
         try:
             options = webdriver.ChromeOptions()
-            options.add_argument('--headless')
+            # options.add_argument('--headless')
             options.add_argument("--enable-javascript")
             options.add_argument("--allow-running-insecure-content")
             options.add_argument("--disable-web-security")
@@ -96,7 +96,9 @@ class BuffSelenium:
         price_text = price_text.replace('¥', '').strip()
         price_float = float(price_text)
 
-        if price_float <= min_price:
+        logger.info(f'price_float: {price_float}')
+        logger.info(f'min_price: {min_price}')
+        if price_float <= float(min_price) + 0.1:
             return True
         return False
     

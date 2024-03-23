@@ -19,8 +19,8 @@
         "X-Requested-With": "XMLHttpRequest"
       }
     },
-    "session": "1-ydaC2xQuK_DtQ5tiJccJxwHHQELgekYZtWshclOy9FTn2028730189",
-    "remember_me": "U1076193301|uziVUnZI2qVbX234PB914sN7qPG1Q1QJ"
+    "session": "1-R0XeK_bPJx5UJMvKHx2LC4wd5TtfwtoG5lkIKfLq9ZFC2028730189",
+    "remember_me": "U1076193301|CRQjGNtHyMFfJUEvUiAz0ZlOFASW61by"
   },
   "steam": {
     "request_interval": 15,
@@ -30,7 +30,7 @@
       }
     },
     "sessionid": "f4ea7bac246ced83dbb4ae4b",
-    "steamLoginSecure": "76561198262506391%7C%7CeyAidHlwIjogIkpXVCIsICJhbGciOiAiRWREU0EiIH0.eyAiaXNzIjogInI6MEVCQV8yNDExNEQwN19GN0JGQSIsICJzdWIiOiAiNzY1NjExOTgyNjI1MDYzOTEiLCAiYXVkIjogWyAid2ViOmNvbW11bml0eSIgXSwgImV4cCI6IDE3MTAyNTczMDgsICJuYmYiOiAxNzAxNTI5OTg4LCAiaWF0IjogMTcxMDE2OTk4OCwgImp0aSI6ICIwRUI2XzI0MTE0RDE4XzMzRkQ4IiwgIm9hdCI6IDE3MTAwNzMwMDEsICJydF9leHAiOiAxNzI4MDk5Mjc1LCAicGVyIjogMCwgImlwX3N1YmplY3QiOiAiMTQ0LjY0LjkuMTYyIiwgImlwX2NvbmZpcm1lciI6ICIxNDQuNjQuOS4xNjIiIH0.pvLkpkLCXE7LL_oFlz3Hm1KaqoOzR86h989seiYFZTb0lsR_JDQm8m6u4PXZPZvxqZKa9jRpDgCfLrVPR_pEBw"
+    "steamLoginSecure": "76561199174020519%7C%7CeyAidHlwIjogIkpXVCIsICJhbGciOiAiRWREU0EiIH0.eyAiaXNzIjogInI6MTdEOV8yNDFCRDY5Nl8zRUEzMiIsICJzdWIiOiAiNzY1NjExOTkxNzQwMjA1MTkiLCAiYXVkIjogWyAid2ViOmNvbW11bml0eSIgXSwgImV4cCI6IDE3MTA2OTYzNTksICJuYmYiOiAxNzAxOTY4NTIyLCAiaWF0IjogMTcxMDYwODUyMiwgImp0aSI6ICIxNjFGXzI0MUJEMjJEXzY2NkFBIiwgIm9hdCI6IDE3MTA2MDg1MjIsICJydF9leHAiOiAxNzI4NzQyMTcyLCAicGVyIjogMCwgImlwX3N1YmplY3QiOiAiOTQuNjAuMjE2LjUyIiwgImlwX2NvbmZpcm1lciI6ICI4OS4yMTQuMTUwLjIyNSIgfQ.Ya1NKU97B1gh9kXs72wyDDmeDm7YKHjFJo_tIjlo9kyEMowOB_G4UBAPi8mwtVoBjFcSvO7xXDGF-kpWkM4bBw"
   },
   "mongo": {
     "uri": "mongodb+srv://RRocha21:benfica10@buff.umt3iuw.mongodb.net/?retryWrites=true&w=majority"
